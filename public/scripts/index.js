@@ -10,7 +10,9 @@ $(() => {
         $.get(`/maps/${mapId}/points`).done(points => {
           html = `<div class="row featurette py-2 border border-dark mt-4">
         <div class="col-md-6 push-md-6">
-          <h2 class="featurette-heading text-center"><a href="${map.url}">${map.name}</a></h2>
+          <h2 class="featurette-heading text-center"><a href="${map.url}">${
+            map.name
+          }</a></h2>
           <p class="lead text-center">${map.desc}</p>
         `;
           for (var i = 0; i < points.length; i++) {
@@ -33,11 +35,9 @@ $(() => {
         });
       }
     } else {
-<<<<<<< HEAD
-      $('.mapContainer').prepend(`<h1 class='text-center'>You have not created any maps yet!</h1>`);
-=======
-      $('.mapContainer').append(`<h1 class='text-center'>There are no created maps!</h1>`);
->>>>>>> 11166e80db4f21f8a03edbc1ad7b2637b5f76285
+      $('.mapContainer').prepend(
+        `<h1 class='text-center'>You have not created any maps yet!</h1>`
+      );
     }
   });
 });
